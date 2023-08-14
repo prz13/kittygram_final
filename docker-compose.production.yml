@@ -20,14 +20,14 @@ services:
   frontend:
     env_file: .env
     image: prz13/kittygram_frontend
-    command: cp -r /app/build/. /frontend_static/
+    command: cp -r /app/build/. /static/
     volumes:
-      - static:/frontend_static
+      - static:/static
   gateway:
     image: prz13/kittygram_gateway
     env_file: .env
+    volumes:
+      - static:/static/
+      - media:/app/media/
     ports:
       - 9000:80
-    volumes:
-      - static:/staticfiles/
-      - media:/app/media/
