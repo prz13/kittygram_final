@@ -37,7 +37,6 @@ cd kittygram
 Клонируем себе репозиторий: git clone git@github.com:prz13/kittygram_final.git
 
 Выполняем запуск: sudo docker compose -f docker-compose.yml up
-```
 
 ## После запуска: 
 
